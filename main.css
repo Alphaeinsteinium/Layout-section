@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+*{
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* == Colors == */
+:root{
+    --first-section: hsl(31, 77%, 52%);
+    --second-section: hsl(184, 100%, 22%);
+    --third-section: hsl(179, 100%, 13%);
+    --fourth-section: hsla(0, 0%, 100%, 0.75);
+    --fifth-section: hsl(0, 0%, 95%);
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;    
+}
+.container{
+    display: flex;
+    background: var(--fifth-section);
+    width: 100%;
+    max-width: 950px;
+    min-height: 650px;
+    padding: 65px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container div:nth-child(1){
+    background: var(--first-section);
+    border-radius: 9px 0px 0px 9px;
+}
+.container div:nth-child(2){
+    background: var(--second-section);
+}
+.container div:nth-child(3){
+    background: var(--third-section);
+    border-radius: 0px 9px 9px 0px;
+}
+.container div{
+    min-height: 360px;
+    min-width: 30px;
+    padding: 30px;
+    font-size: 16px;
+}
+.container div h1{
+    color: var(--fifth-section);
+    padding-top: 6%;
+}
+div p{
+    color: var(--fourth-section);
+    padding-top: 8%;
+    line-height: 1.5rem;
+}
+/* Button */
+button{
+    padding: 10px 25px;
+    text-align: center;
+    background: var(--fifth-section);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+.container div:nth-child(1) button{
+    color: var(--first-section);
+}
+.container div:nth-child(2) button{
+    color: var(--second-section);
+}
+.container div:nth-child(3) button{
+    color: var(--third-section);
+}
+.container div button:active{
+    background: transparent;
+    color: var(--fifth-section);
+    border: 2px solid var(--fifth-section);
+}
+footer{
+    padding-top: 25%;
+}
+/* Responsive Design */
+@media (max-width:550px){
+    body{
+        display: block;
+        background: /*var(--fifth-section);*/ var(--fifth-section);
+        align-items: left;
+        justify-content: space-between;
+        padding: 0px;
+        margin: 0px;
+    }
+    container{
+       display: block;
+       background: var(--fifth-section);
+       width: auto;
+       max-width: auto;
+       min-height: auto;
+       padding: 5px;
+       
+       justify-content: inherit;
+       position: relative;
+       /*flex-wrap: wrap; */
+      
+    }
+    /*.container div:nth-child(2), .container div:nth-child(3){
+        display: none;
+    }*/
+    .container div{
+      min-height: 50px;
+      min-width: 100px;
+      width: 75%;
+      transform: translateX(-3%);
+      padding: 10px;
+      font-size: 14px;
+      margin-left: 0px;
+    }
+    .container div h1{
+     color: var(--fifth-section);
+     padding-top: inherit;
+    }
+div p{
+     color: var(--fourth-section);
+     padding-top: inherit;
+     float: left;
+     font-size: 11px;
+     line-height: 1.4em;
+}
+/* Button */
+button{
+     padding: 10px 12px;
+     text-align: center;
+     background: var(--fifth-section);
+     outline: none;
+     border: none;
+     font-size: 9px;
+     border-radius: 15px;
+    }
+    footer{
+        padding-top: 6%;
+    }
+}
+2
